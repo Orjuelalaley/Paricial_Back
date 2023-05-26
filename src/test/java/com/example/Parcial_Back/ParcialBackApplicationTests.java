@@ -1,6 +1,6 @@
 package com.example.Parcial_Back;
 
-import com.example.Parcial_Back.entity.Libro;
+import com.example.Parcial_Back.entity.Libro_SebastianOrjuela;
 import com.example.Parcial_Back.repository.LibroRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +19,8 @@ class ParcialBackApplicationTests {
 	@Test
 	public void getAll() {
 		try {
-			Libro libro = libroRepository.findById(1L).get();
-			assertEquals(libro.getId(), 1L);
+			Libro_SebastianOrjuela libroSebastianOrjuela = libroRepository.findById(1L).get();
+			assertEquals(libroSebastianOrjuela.getId(), 1L);
 		} catch (Exception e) {
 			assert (false);
 		}
@@ -28,15 +28,15 @@ class ParcialBackApplicationTests {
 	@Test
 	public void add() {
 		try {
-			Libro libro = new Libro();
-			libro.setTitulo("El principito");
-			libro.setAutor("Antoine de Saint-Exupéry");
-			libro.setReferencia("Reynal & Hitchcock");
-			libro.setPrecio(10000.0);
-			libro.setUbicacion("CUNDINAMARCA");
-			libroRepository.save(libro);
-			Libro libroGuardado = libroRepository.findById(1L).get();
-			assertEquals(libroGuardado.getId(), 1L);
+			Libro_SebastianOrjuela libroSebastianOrjuela = new Libro_SebastianOrjuela();
+			libroSebastianOrjuela.setTitulo("El principito");
+			libroSebastianOrjuela.setAutor("Antoine de Saint-Exupéry");
+			libroSebastianOrjuela.setReferencia("Reynal & Hitchcock");
+			libroSebastianOrjuela.setPrecio(10000.0);
+			libroSebastianOrjuela.setUbicacion("CUNDINAMARCA");
+			libroRepository.save(libroSebastianOrjuela);
+			Libro_SebastianOrjuela libroSebastianOrjuelaGuardado = libroRepository.findById(1L).get();
+			assertEquals(libroSebastianOrjuelaGuardado.getId(), 1L);
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 			assert (false);

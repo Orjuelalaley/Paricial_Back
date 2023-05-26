@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Libro {
+public class Libro_SebastianOrjuela {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
