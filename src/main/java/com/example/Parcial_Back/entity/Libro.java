@@ -22,7 +22,7 @@ public class Libro {
     private String titulo;
     private String referencia;
     private String autor;
-    private int precio;
+    private Double precio;
     private String ubicacion;
 
 }

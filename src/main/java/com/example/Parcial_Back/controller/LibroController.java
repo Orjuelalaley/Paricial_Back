@@ -21,6 +21,7 @@ public class LibroController {
     @Autowired
     private LibroRepository libroRepository;
 
+
     @GetMapping("/all")
     public ResponseEntity<?> getAll(){
         List<Libro> libros = new ArrayList<>(libroRepository.findAll());
